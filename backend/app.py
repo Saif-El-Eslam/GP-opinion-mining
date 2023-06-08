@@ -13,6 +13,12 @@ assets = Environment(app)
 assets.auto_build = True
 app.config["ASSETS_DEBUG"] = True
 
+@app.after_request
+def add_cors_headers(response):
+    response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    response.headers['Access-Control-Allow-Methods'] = 'POST'
+    return response
 
 @app.route("/overview", methods=["POST"])
 def get_overview():
@@ -31,7 +37,7 @@ def get_overview():
         keywords = get_keywords(doc["text"], num_words, docs)
         # get topics for each doc
         topics = get_topics(doc["text"], num_topics, num_words)
-        result.append({"keywords": keywords, "topics": topics, "title": doc["title"]})
+        result.append({"keywords": keywords, "topics": topics, "title": doc["title"], "text": doc["text"]})
     return jsonify(result=result)
 
 
