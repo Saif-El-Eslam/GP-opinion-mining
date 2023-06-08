@@ -15,7 +15,7 @@ const Navbar = () => {
       <ul className="navbar__list">
         
         <li className="navbar__item">
-          <Link to="/topic-extraction" className="navbar__link">Topic Extractor</Link>
+          <Link to="/search-articles" className="navbar__link">Search Articles</Link>
         </li>
         <li className="navbar__item">
           <Link to="/quote-extraction" className="navbar__link">Quote Extractor</Link>
