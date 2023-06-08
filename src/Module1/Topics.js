@@ -17,7 +17,7 @@ function Topics() {
   return (
     <div className="topics">
       <div className="topics-header">
-        <h1>Topics</h1>
+        <h1>Found Topics</h1>
       </div>
 
       <div className="topics-content">
