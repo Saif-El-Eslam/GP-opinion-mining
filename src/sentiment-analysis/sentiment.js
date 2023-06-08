@@ -1,6 +1,6 @@
 import "./sentiment.css";
 import Navbar from "../components/Navbar.js";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from 'axios';
 
@@ -29,6 +29,8 @@ function Sentiment({ topic, person }) {
         }, (error) => {
             console.log(error);
         });
+
+        setRes(true);
     }
 
   return (
@@ -73,13 +75,13 @@ function Sentiment({ topic, person }) {
                 </div>
 
                 <div className="analyze-buttom">
-                    <button disabled={!text1} id={!text1 ? "analyse" : "compare-button"} onClick={handleAnalyse}>analyse</button>{" "}
+                    <button disabled={!text1} id={!text1 ? "disabled-button" : "enabled-button"} onClick={handleAnalyse}>analyse</button>{" "}
                 </div>
 
             </div>
-            <div className="sentiment-results">
+            {res && <div className="sentiment-results">
                 {/* three devs 1- for the sentiment of the first one 2- the score bar 3- sentiment of the second one */}
-                {true && <div className="sentiment-result">
+                {res && <div className="sentiment-result">
                     <div className="sentiment-result-wrapper">
                         <div>
                             <h1 className="sentiment-result-header">Sentiment 1</h1>
@@ -99,7 +101,7 @@ function Sentiment({ topic, person }) {
                         </div>
                     </div>
                 </div>}
-            </div>
+            </div>}
         </div>
     </div>
   );

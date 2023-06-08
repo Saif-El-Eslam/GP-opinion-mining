@@ -6,6 +6,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* add logo from images */}
+      <div className="navbar__logo">
+        <Link to="/" className="navbar__link">
+          <img src="Logo.png" alt="logo"  />
+        </Link>
+      </div>
 
       <ul className="navbar__list">
         

@@ -1,8 +1,7 @@
 import './App.css';
 import StartPage from './Module1/StartPage';
 import Topics from './Module1/Topics';
-import Opinion from './Module2/Opinion';
-import CompRes from './Module3/CompRes';
+import Quote from './quote-extraction/quote';
 import Sentiment from './sentiment-analysis/sentiment';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -14,6 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<StartPage />} />
 
+
+        <Route path="/quote-extraction" element={<Quote />} />
         <Route path="/sentiment-analysis" element={<Sentiment />} />
 
         {/*<Route path="/topics" element={<Topics />} />
