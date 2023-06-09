@@ -9,6 +9,10 @@
     padding-left: 15px;
 }
 
+.page{
+    overflow: hidden;
+}
+
 .summary-page-wrapper{
     display: flex;
     justify-content: center;
@@ -41,7 +45,7 @@
 .summary #text{
     
     width: 96%;
-    height: 120px;
+    height: 300px;
 
     font-size: 18px;
     font-weight: 500;
@@ -65,36 +69,35 @@
 .summary-results h1{
     /* padding: 50px 0 0 0; */
     width: fit-content;
-    margin: 80px auto 30px;
-}
-
-.summary-wrapper{
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
-
-    width: 100%;
+    margin: 100px auto 30px;
 }
 
 
 .summary-wrapper{
-    display: flex;
-    flex-direction: column;
     gap: 5px;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 85%;
+    height: 290px;
 
     font-size: 18px;
     font-weight: 500;
     color: #333;
     padding: 10px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 55px;
 
     border-radius: 10px;
     border: 1px solid #ccc;
+
+    overflow-y: scroll;
+}
+
+.get-sentiment-button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.2s ease-in-out;
 }

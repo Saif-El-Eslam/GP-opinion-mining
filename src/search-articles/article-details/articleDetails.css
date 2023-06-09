@@ -58,6 +58,7 @@
 
     margin: auto 20px auto 60px;
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 }
 .summarize-button:hover{
     background-color: #ccc;
@@ -77,6 +78,7 @@
     margin: auto 0 auto 0;
 
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 }
 .extract-qoutes-button:hover{
     background-color: #ccc;

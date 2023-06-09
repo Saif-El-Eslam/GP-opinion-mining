@@ -3,19 +3,28 @@ import { useState } from "react";
 // import { Link } from "react-router-dom";
 import "./summary.css";
 import Navbar from "../nav-bar/Navbar";
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Summary() {
+  const navigate = useNavigate();
 
-  const [text, setText] = useState('');
+  const location = useLocation()
+  const { article } = location.state != null ? location.state : { article: "" }
 
+  const [text, setText] = useState(article);
   const handleText = (e) => {
     setText(e.target.value);
   }
 
   const [summary, setSummary] = useState("");
+  const handleSummarize = () => {
+    setSummary("This is the summary, its a very good summary, its the best summary ever.");
+  }
 
-  const handleExtract = () => {
-    setSummary("quote1 sjdkd jsdfhsdlhfj jdskfhudsl quote2 quote3 quote4 quote5 quote6 quote1 sjdkd jsdfhsdlhfj jdskfhudsl quote2 quote3 quote4 quote5 quote6 quote1 sjdkd jsdfhsdlhfj jdskfhudsl quote2 quote3 quote4 quote5 quote6");
+  const handleGetSentiment = () => {
+    // navigate to sentiment page with the summary
+    navigate('/sentiment-analysis', { state: { summary: summary } });
   }
 
   return (
@@ -41,18 +50,26 @@ function Summary() {
           </div>
 
           <div className="button-wrapper">
-            <button disabled={!text} id={!text?'disabled-button':'enabled-button'} onClick={handleExtract} >
+            <button disabled={!text} id={!text?'disabled-button':'enabled-button'} onClick={handleSummarize} >
               Summarize
             </button>
           </div>
         </div>
 
         {summary ? <div className="summary-results">
+            
             <h1>Summary</h1>
             
             <div className="summary-wrapper">
-                {summary}
+                <div className="summary-text">{summary}</div>
             </div>
+
+            <div className="get-sentiment-button-wrapper">
+              <button disabled={!text} id={!text?'disabled-button':'enabled-button'} onClick={handleGetSentiment} >
+                Get Sentiment
+              </button>
+            </div>
+
         </div> : null}
       </div>
    

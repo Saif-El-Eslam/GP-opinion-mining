@@ -1,0 +1,43 @@
+.quote-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.quote-content-hover{   
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.quote-content-hover:hover{
+    background-color: #dedede;
+}
+.quote-content-hover:active{
+    background-color: #a0a0a0;
+}

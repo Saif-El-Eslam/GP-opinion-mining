@@ -96,9 +96,11 @@
 .articles-content{
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+
+    height: 75vh;
+    overflow-y: scroll;
 }
 
 

@@ -3,11 +3,15 @@ import Navbar from "../nav-bar/Navbar.js";
 // import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 
 
 function Sentiment({ topic, person }) {
+    const location = useLocation()
+    const { summary } = location.state != null ? location.state : { summary: "" }
+    const { quote } = location.state != null ? location.state : { quote: "" }
 
-    const [text1, setText1] = useState('');
+    const [text1, setText1] = useState(summary == null ? quote : summary);
     const [text2, setText2] = useState('');
     const [res, setRes] = useState(false);
 

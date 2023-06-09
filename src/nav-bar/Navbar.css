@@ -3,6 +3,7 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     position: fixed;
     width: 100%;
@@ -18,6 +19,7 @@
   
 .navbar__item {
     margin-right: 10px;
+    font-size: 16px;
 }
 
 .navbar__link {
@@ -32,3 +34,11 @@
     background-color: #ddd;
 }
   
+.navbar__logo{
+    display: flex;
+}
+.navbar-logo{
+    margin: auto;
+    width: 150px;
+    height: 30px;
+}

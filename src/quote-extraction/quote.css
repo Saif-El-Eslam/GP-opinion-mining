@@ -30,7 +30,7 @@
     width: fit-content;
     font-weight: 600;
     color: #333;
-    margin-top: 85px;
+    margin-top: 100px;
 }
 
 .text-content{
@@ -41,7 +41,7 @@
 .quote #text{
     
     width: 96%;
-    height: 120px;
+    height: 400px;
 
     font-size: 18px;
     font-weight: 500;
@@ -63,7 +63,7 @@
 }
 
 .quote-results h1{
-    padding: 50px 0 0 0;
+    padding: 65px 0 0 0;
 }
 
 .quotes-wrapper{
@@ -81,21 +81,3 @@
     width: 100%;
 }
 
-.quote-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
-
-    font-size: 18px;
-    font-weight: 500;
-    color: #333;
-    padding: 10px 0;
-    margin: auto;
-    margin-bottom: 20px;
-
-    border-radius: 10px;
-    border: 1px solid #ccc;
-}

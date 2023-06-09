@@ -3,10 +3,16 @@ import { useState } from "react";
 // import { Link } from "react-router-dom";
 import "./quote.css";
 import Navbar from "../nav-bar/Navbar";
+import QuoteCard from "./quote-card/quoteCard";
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Quote() {
+  const navigate = useNavigate();
+  const location = useLocation()
+  const { article } = location.state != null ? location.state : { article: "" }
 
-  const [text, setText] = useState('');
+  const [text, setText] = useState(article);
 
   const handleText = (e) => {
     setText(e.target.value);
@@ -15,7 +21,13 @@ function Quote() {
   const [quotes, setQuotes] = useState([]);
 
   const handleExtract = () => {
-    setQuotes(["quote1 sjdkd jsdfhsdlhfj jdskfhudsl", "quote2", "quote3", "quote4", "quote5", "quote6"]);
+    setQuotes(["quote1 sjdkd jsdfhsdlhfj jdskfhudsl quote1 sjdkd jsdfhsdlhfj jdskfhudsl quote1 sjdkd jsdfhsdlhfj jdskfhudsl", "quote2", "quote3", "quote4", "quote5", "quote6"]);
+  }
+
+
+  const handleGetSentiment = (clickedQuote) => {
+    // navigate to sentiment page with the summary
+    navigate('/sentiment-analysis', { state: { quote: clickedQuote } });
   }
 
   return (
@@ -56,12 +68,8 @@ function Quote() {
             <div className="quotes-container">
 
               {quotes.map((quote, i) => (
-                <div key={i}>
-                  <div className="quote-wrapper">
-                    <div className="quote-content">
-                      {quote}
-                    </div>
-                  </div>
+                <div key={i} onClick={()=>handleGetSentiment(quote)}>
+                  <QuoteCard quote={quote} />
                 </div>
               ))}
 

@@ -1,11 +1,11 @@
 import './searchArticles.css';
 import Navbar from '../nav-bar/Navbar';
+import Logo from "../images/Logo.png";
 
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Checkbox from '@mui/material/Checkbox';
-
 import { Link } from "react-router-dom";
 
 
@@ -40,7 +40,7 @@ function SearchArticles() {
             <div className="search-articles">
                 {/* devide yhe page to 2 main parts left and right */}
                 <div className='top-part'>
-                    <img src="../images/Logo.png" alt="Logo" />
+                    <img src={Logo} alt="Logo" />
                 </div>
                 
                 <div className="bottom-part">

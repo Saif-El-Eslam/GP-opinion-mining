@@ -19,7 +19,7 @@
     width: 100%;
     font-weight: 600;
     color: #333;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .sentiment-content{
@@ -64,6 +64,7 @@ textarea{
 
 
     cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 }
 
 #disabled-button{
