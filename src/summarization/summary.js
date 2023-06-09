@@ -1,8 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
 import "./summary.css";
 import Navbar from "../nav-bar/Navbar";
+import TypingEffect from "./typing-effect/typingEffect";
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,7 +12,6 @@ function Summary() {
 
   const location = useLocation()
   const { article } = location.state != null ? location.state : { article: "" }
-
   const [text, setText] = useState(article);
   const handleText = (e) => {
     setText(e.target.value);
@@ -61,7 +61,8 @@ function Summary() {
             <h1>Summary</h1>
             
             <div className="summary-wrapper">
-                <div className="summary-text">{summary}</div>
+                {/* <div className="summary-text">{summary}</div> */}
+                <TypingEffect text={summary} />
             </div>
 
             <div className="get-sentiment-button-wrapper">
