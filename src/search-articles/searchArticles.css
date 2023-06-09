@@ -1,0 +1,118 @@
+/* ////////////////////////////////// Search Articles Form ////////////////////////////////// */
+.search-articles{
+    background-color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* width: 50%; */
+}
+
+.top-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 30%;
+    margin: auto;
+}
+
+.bottom-part{
+    display: flex;
+
+    width: 100%;
+    height: 70%;
+    margin: auto;
+
+    
+}
+
+
+.search-person{
+    width: 100%;
+}
+
+.search-person-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-form{
+    height: 80%;
+    margin: auto;
+}
+
+.input-form-container{
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+#start-input-name, #start-input-topic{
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+#start-input-date{
+    width: 300px;
+    height: 30px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#start-input-button{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+#start-input-button:hover{
+    background-color: #ccc;
+}
+
+#start-input-button:active{
+    background-color: #aaa;
+}
+
+/* ////////////////////////////////// Search Articles Results ////////////////////////////////// */
+/* .search-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: raw;
+
+    height: 100vh;
+    width: 100%;
+}
+
+
+.search-articles-results{
+    width: 50%;
+    height: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
