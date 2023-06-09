@@ -1,5 +1,5 @@
 import './startPage.css';
-import Navbar from '../components/Navbar';
+import Navbar from '../nav-bar/Navbar';
 
 function StartPage() {
   return (

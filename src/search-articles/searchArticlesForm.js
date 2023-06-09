@@ -1,5 +1,5 @@
 import './searchArticles.css';
-import Navbar from '../components/Navbar';
+import Navbar from '../nav-bar/Navbar';
 
 import { useState } from "react";
 import DatePicker from "react-datepicker";

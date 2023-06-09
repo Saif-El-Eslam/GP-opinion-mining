@@ -1,6 +1,6 @@
 import "./articlesResults.css";
 import Article from "./articleCard";
-import Navbar from '../../components/Navbar';
+import Navbar from '../../nav-bar/Navbar';
 import { useNavigate } from 'react-router-dom';
 
 

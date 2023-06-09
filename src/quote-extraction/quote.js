@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 // import { Link } from "react-router-dom";
 import "./quote.css";
-import Navbar from "../components/Navbar";
+import Navbar from "../nav-bar/Navbar";
 
 function Quote() {
 

@@ -1,0 +1,10 @@
+.word-cloud {
+    width: 90%;
+    height: 290px;
+
+    margin: auto;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+  

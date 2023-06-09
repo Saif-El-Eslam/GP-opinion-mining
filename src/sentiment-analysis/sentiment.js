@@ -1,5 +1,5 @@
 import "./sentiment.css";
-import Navbar from "../components/Navbar.js";
+import Navbar from "../nav-bar/Navbar.js";
 // import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from 'axios';
