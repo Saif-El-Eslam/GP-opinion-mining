@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./summary.css";
 import Navbar from "../nav-bar/Navbar";
 import TypingEffect from "./typing-effect/typingEffect";
-import { useLocation, useNavigate, Switch } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Summary() {
   const navigate = useNavigate();
