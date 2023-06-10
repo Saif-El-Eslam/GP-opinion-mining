@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Logo from "../images/Logo.png";
 
-const Navbar = () => {
+const Navbar = ({ home }) => {
   return (
-    <nav className="navbar">
+    <nav className={home ? "navbar-home" : "navbar"}>
       {/* add logo from images */}
-        <Link to="/" className="navbar__link">
+        <Link to="/" className={home ? "navbar__link-home" : "navbar__link"}>
           <div className="navbar__logo">
             <img src={Logo} alt="logo" className="navbar-logo" />
           </div>
@@ -16,16 +16,16 @@ const Navbar = () => {
       <ul className="navbar__list">
         
         <li className="navbar__item">
-          <Link to="/search-articles" className="navbar__link">Search Articles</Link>
+          <Link to="/search-articles" className={home ? "navbar__link-home" : "navbar__link"}>Search Articles</Link>
         </li>
         <li className="navbar__item">
-          <Link to="/quote-extraction" className="navbar__link">Quote Extractor</Link>
+          <Link to="/quote-extraction" className={home ? "navbar__link-home" : "navbar__link"}>Quote Extractor</Link>
         </li>
         <li className="navbar__item">
-          <Link to="/summarizer" className="navbar__link">Summarizer</Link>
+          <Link to="/summarizer" className={home ? "navbar__link-home" : "navbar__link"}>Summarizer</Link>
         </li>
         <li className="navbar__item">
-          <Link to="/sentiment-analysis" className="navbar__link">Sentiment Analyser</Link>
+          <Link to="/sentiment-analysis" className={home ? "navbar__link-home" : "navbar__link"}>Sentiment Analyser</Link>
         </li>
       </ul>
     </nav>

@@ -1,0 +1,41 @@
+.home-page-wrapper{
+    background-image: url('F:\Eng materials\10th semester\GP-2\site\opinion-mining\src\images\HomePageBackground.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+}
+
+.cards-wrapper{
+    position: fixed;
+    width: 100%;
+
+    top: 73vh;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    z-index: 99;
+}
+
+.home-summary-wrapper{
+    margin-top: 180px;
+    margin-left: 200px;
+    max-width: 500px;
+    height: fit-content;
+    padding: 20px;
+}
+
+.summary-wrapper-header{
+    width: fit-content;
+    height: fit-content;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #757575;
+    padding: 10px 0 50px 0;
+}
