@@ -43,8 +43,10 @@
     height: 140px;
     
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    justify-content: space-evenly;
+
+    gap: 10px;
 }
 
 .header{

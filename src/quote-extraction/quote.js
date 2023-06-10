@@ -30,6 +30,11 @@ function Quote() {
     navigate('/sentiment-analysis', { state: { quote: clickedQuote } });
   }
 
+  const [name, setName] = useState("");
+  const handleName = (e) => {
+    setName(e.target.value);
+  }
+
   return (
     <div className="page">
       <Navbar />
@@ -50,6 +55,10 @@ function Quote() {
                     onChange={handleText}
                 ></textarea>
             </div>
+          </div>
+
+          <div className="quote-input-name-wrapper">
+            <input id='quote-input-name' type="text" placeholder="Enter Name" value={name} onChange={handleName}></input>
           </div>
 
           <div className="button-wrapper">

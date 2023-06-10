@@ -9,6 +9,20 @@
     padding-left: 15px;
 }
 
+.summary #text-summary{
+    
+    width: 96%;
+    height: 350px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 2%;
+}
+
 .page{
     overflow: hidden;
 }
@@ -19,13 +33,13 @@
     align-items: center;
 }
 
-.text-wrapper{
+.text-wrapper-summary{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    margin: 0 20px 50px 0px;
+    margin: 0 20px 70px 0px;
 
     width: 100%;
 }
@@ -45,7 +59,7 @@
 .summary #text{
     
     width: 96%;
-    height: 300px;
+    height: 350px;
 
     font-size: 18px;
     font-weight: 500;
@@ -78,14 +92,14 @@
     justify-content: center;
     align-items: center;
     width: 85%;
-    height: 290px;
+    height: 340px;
 
     font-size: 18px;
     font-weight: 500;
     color: #333;
     padding: 10px;
     margin: auto;
-    margin-bottom: 55px;
+    margin-bottom: 75px;
 
     border-radius: 10px;
     border: 1px solid #ccc;

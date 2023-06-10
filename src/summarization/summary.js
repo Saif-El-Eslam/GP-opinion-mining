@@ -32,14 +32,14 @@ function Summary() {
       <Navbar />
       <div className="summary-page-wrapper">
         <div className="summary">
-          <div className="text-wrapper">
+          <div className="text-wrapper-summary">
             <h1 className="text-header">
                 {"Article"}{" "}
             </h1>
 
             <div className="text-content" style={{width: summary.length === 0 ? '60%' : '90%'}}>
                 <textarea
-                    id="text"
+                    id="text-summary"
                     type="text"
                     name="text"
                     value={text}

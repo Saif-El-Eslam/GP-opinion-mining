@@ -11,10 +11,10 @@ import { Link } from "react-router-dom";
 function StartPage() {
 
   const summaryDescription = "This is temp description About our team. it should be consist of a couuple of lines so iam trying to extend it as much as i could. This is temp description. This is temp description. This is temp description. ";
-  const searchArticleDescription = "This is temp description. it should be consist of a couuple of lines so iam trying to extend it as much as i could. This is temp description. This is temp description. This is temp description. ";
-  const quoteExtractorDescription = "This is temp description. it should be consist of a couuple of lines so iam trying to extend it as much as i could. This is temp description. This is temp description. This is temp description. ";
-  const summarizerDescription = "This is temp description. it should be consist of a couuple of lines so iam trying to extend it as much as i could. This is temp description. This is temp description. This is temp description. ";
-  const sentimentAnalyzerDescription = "This is temp description. it should be consist of a couuple of lines so iam trying to extend it as much as i could. This is temp description. This is temp description. This is temp description. ";
+  const searchArticleDescription = "Get Articles from the web, about any topic or any person you want, or the trending articles.";
+  const quoteExtractorDescription = "Get Quotes from your text, or from the article you searched for.";
+  const summarizerDescription = "Get a summary of your text, or a summary of the article you searched for.";
+  const sentimentAnalyzerDescription = "Get sentiment of your text, and compare it with the sentiment of the summary.";
 
 
   return (
