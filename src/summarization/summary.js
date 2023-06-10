@@ -4,8 +4,7 @@ import { useState } from "react";
 import "./summary.css";
 import Navbar from "../nav-bar/Navbar";
 import TypingEffect from "./typing-effect/typingEffect";
-import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Switch } from 'react-router-dom';
 
 function Summary() {
   const navigate = useNavigate();
@@ -27,6 +26,11 @@ function Summary() {
     navigate('/sentiment-analysis', { state: { summary: summary } });
   }
 
+  const [selectedOption, setSelectedOption] = useState('option1');
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+  
   return (
     <div className="page">
       <Navbar />
@@ -47,6 +51,21 @@ function Summary() {
                     onChange={handleText}
                 ></textarea>
             </div>
+          </div>
+
+          <div className="switch-wrapper">
+            <div>
+              <label>
+                <input type="radio" value="option1" checked={selectedOption === 'option1'} onChange={handleOptionChange} />
+                Extractive
+              </label>
+
+              <label>
+                <input type="radio" value="option2" checked={selectedOption === 'option2'} onChange={handleOptionChange} />
+                Abstractive
+              </label>
+            </div>
+
           </div>
 
           <div className="button-wrapper">
